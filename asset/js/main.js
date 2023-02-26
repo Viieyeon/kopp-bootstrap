@@ -22,4 +22,5 @@ var swiper_2 = new Swiper(".mySwiper", {
         delay: 2500,
         disableOnInteraction: false,
       },
+      
     });
