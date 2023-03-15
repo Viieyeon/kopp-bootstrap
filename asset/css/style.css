@@ -45,6 +45,11 @@ header{
     right: 0;
 }
 
+.menu-mobile,
+.menu-btn{
+    display: none;
+}
+
 .header__inner{
     padding: 40px 0 0 0;
 }
@@ -70,12 +75,8 @@ header{
     background-image: url(/asset/img/bg1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-}
-
-.cover__inner{
-    padding: 162px 0 0 0;
+    background-position: center center;
+    min-height: 80vh;
 }
 
 .cover__info{
@@ -132,33 +133,13 @@ header{
     color: var(--text);
 }
 
-.about__slider{
-    max-width: 750px;
-    height: 450px;
-}
-
 .about__item img {
     display: block;
     object-fit: cover;
 }
 
-.swiper-pagination {
+.swiper-pagination{
     position: unset;
-    margin-top: -60px;
-}
-
-.swiper-pagination span{
-    background-color: var(--main);
-    width: 10px;
-    height: 10px;
-}
-
-.swiper-slide{
-    margin-right: 15px;
-}
-
-.swiper-slide:last-child{
-    margin-right: 100px;
 }
 
 .kopp__inner{
@@ -243,15 +224,19 @@ header{
 }
 
 .cards-item {
-    height: 355px;
     border: 1px solid var(--main);
     border-radius: 10px;
-    padding: 100px 0 0 60px;
+    padding: 80px;
 }
 
 .cards-item:hover{
     background: var(--hover);
     border: 1px solid var(--hover);
+}
+
+.card-3 img{
+    width: 58px;
+    height: 66px;
 }
 
 .cards-item h3{
@@ -283,6 +268,7 @@ header{
     border-radius: 10px;
     padding: 50px 30px;
     margin-right: 20px;
+    min-height: 450px;
 }
 
 .slide__title{
@@ -297,21 +283,129 @@ header{
 
 .contacts{
     padding: 70px 0 150px 0;
-
 }
 
 .contacts__title{
     margin: 0 0 50px 0;
 }
 
+.contacts__item{
+    gap: 20px;
+}
 
 .footer{
     padding: 50px 0 50px 0;
 }
 
-
 .footer__menu-link, .politics{
     color: #8088A7;
+}
+
+
+
+@media (max-width: 400px){
+    .point-decor-1::before,
+    .point-decor-2::before,
+    .point-decor-1::after,
+    .cover__img{
+        display: none;
+    }
+
+}
+
+@media (max-width: 780px){
+    .menu-btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 60px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 6;
+    }
+
+    .menu-btn span{
+        height: 3px;
+        width: 100%;
+        background-color: #00114E;
+    }
+
+    .header__logo{
+        z-index: 7;
+    }
+
+    .header__menu{
+        display: none;
+    }
+
+    .menu-mobile{
+        display: none;
+    }
+
+    .menu-mobile.menu--open{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #F4F8FF;
+        height: 100vh;
+        z-index: 5;
+        text-align: center;
+        padding-top: 140px;
+    }
+
+    .menu-link{
+        color: #00114E;
+        font-size: 3vh;
+        display: block;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 984px){
+    .about__slider{
+        margin-left: 0;
+    }
+
+    .kopp__inner{
+        padding-top: 0;
+    }
+
+    .reviews__item{
+        max-width: 520px;
+    }
+
+    .footer__menu-list{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1100px){
+    .point-decor-1::before,
+    .point-decor-2::before{
+        content: '';
+        background-image: url(/asset/img/vector-1.2.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 44px;
+        height: 79px;
+        top: -65px;
+        left: 190px;
+    }
+
+}
+
+@media (max-width: 1400px){
+    .cards-item{
+        padding: 40px;
+    }
 }
 
 

@@ -19,7 +19,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__inner row">
+            <div class="header__inner row d-flex justify-content-between">
                 <a href="#" class="header__logo col-2">
                     <img src="/asset/img/logo.svg" alt="logo" class="logo-link">
                 </a>
@@ -47,34 +47,67 @@
                         </li>
                     </ul>
                 </nav>
+                <button class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="header__menu menu-mobile">
+                    <li class="mobile-item">
+                        <a href="#" class="menu-link">
+                            О нас
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="#" class="menu-link">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="#" class="menu-link">
+                            Тестирование
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="#" class="menu-link">
+                            Войти
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
     <main class="main">
-        <section class="cover">
+        <section class="cover align-items-center d-flex">
             <div class="container">
-                <div class="cover__inner row">
-                    <div class="cover__info col-lg-6">
-                        <h1 class="info__title">
-                            Комплексное тестирование у вас дома
-                        </h1>
-                        <p class="info__text">
-                            Определите свои реальные способности, общую и профессиональную мотивацию, а также личностные
-                            качества.
-                        </p>
-                        <a href="#" class="info__link">
-                            <button class="info__button">
-                                Подробнее
-                            </button>
-                        </a>
+                <div class="row mt-5 align-items-center">
+                    <div class="col-lg-7 col-md-12">
+                        <div class="cover__info">
+                            <h1 class="info__title">
+                                Комплексное тестирование у вас дома
+                            </h1>
+                            <p class="info__text">
+                                Определите свои реальные способности, общую и профессиональную мотивацию, а также
+                                личностные
+                                качества.
+                            </p>
+                            <a href="#" class="info__link">
+                                <button class="info__button">
+                                    Подробнее
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                    <img src="/asset/img/img-1.png" alt="progress" class="cover__img col-lg-6">
+                    <div class="col-lg-5 col-md-12 cover__img">
+                        <img src="/asset/img/img-1.svg" alt="progress" class="cover__img">
+                    </div>
                 </div>
             </div>
         </section>
         <section class="about">
             <div class="container">
-                <div class="about__inner row align-items-end">
+                <div class="about__inner row align-items-center">
                     <div class="about__info col-lg-5">
                         <h2 class="about__title">
                             О нас
@@ -92,26 +125,16 @@
                             Подробнее
                         </a>
                     </div>
-                    <div class="about__slider swiper col-lg-6 offset-md-1">
-                        <ul class="swiper-wrapper">
-                            <!-- Slides -->
-                            <li class="swiper-slide about__item">
-                                <img src="/asset/img/img-2.png" alt="">
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="/asset/img/img-2.png" alt="">
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="/asset/img/img-2.png" alt="">
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="/asset/img/img-2.png" alt="">
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="/asset/img/img-2.png" alt="">
-                            </li>
-                        </ul>
-                        <div class="swiper-pagination"></div>
+                    <div class="about__slider swiper col-lg-6 offset-md-1 mt-5">
+                        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true"
+                            space-between="30" centered-slides="true" autoplay-delay="2500"
+                            autoplay-disable-on-interaction="false">
+                            <swiper-slide><img src="/asset/img/img-2.png" alt=""></swiper-slide>
+                            <swiper-slide><img src="/asset/img/img-2.png" alt=""></swiper-slide>
+                            <swiper-slide><img src="/asset/img/img-2.png" alt=""></swiper-slide>
+                            <swiper-slide><img src="/asset/img/img-2.png" alt=""></swiper-slide>
+                            <swiper-slide><img src="/asset/img/img-2.png" alt=""></swiper-slide>
+                        </swiper-container>
                     </div>
 
                 </div>
@@ -119,11 +142,11 @@
         </section>
         <section class="kopp">
             <div class="container">
-                <div class="kopp__inner row align-items-end">
+                <div class="kopp__inner row align-items-center">
                     <div class="kopp__img col-lg-6">
                         <img src="/asset/img/img-2.png" alt="img">
                     </div>
-                    <div class="kopp__info col-lg-5 offset-md-1">
+                    <div class="kopp__info col-lg-5 offset-lg-1 mt-3">
                         <h2 class="kopp__title">
                             Что такое КОПП?
                         </h2>
@@ -152,7 +175,7 @@
                         </h2>
                         <img src="/asset/img/data_analysis.png" alt="people" class="advantages__img">
                     </div>
-                    <div class="advantages__points col-lg-5 offset-md-2">
+                    <div class="advantages__points col-lg-5 offset-lg-2 d-flex flex-column align-items-center">
                         <div class="points__item">
                             <img src="/asset/img/1.png" alt="1" class="points__figure">
                             <p class="points__text point-1">
@@ -183,35 +206,29 @@
         </section>
         <section class="category">
             <div class="container">
-                    <h2 class="category__title">
-                        Подберите категорию под себя
-                    </h2>
+                <h2 class="category__title">
+                    Подберите категорию под себя
+                </h2>
                 <div class="row">
-                    <div class="col-sm-4">
-                      <div class="card">
+                    <div class="card col-lg-4 mb-4">
                         <div class="card-body cards-item ">
                             <img src="/asset/img/briefcase.svg" alt="briefcase">
-                          <h3>Для обучающихся</h3>
+                            <h3>Для обучающихся</h3>
                         </div>
-                      </div>
                     </div>
-                    <div class="col-sm-4">
-                      <div class="card">
+                    <div class="card col-lg-4 mb-4">
                         <div class="card-body cards-item">
                             <img src="/asset/img/specialist.svg" alt="specialist">
-                          <h3>Для специалистов</h3>
+                            <h3>Для специалистов</h3>
                         </div>
-                      </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                          <div class="card-body cards-item">
+                    <div class="card col-lg-4 mb-4">
+                        <div class="card-body cards-item card-3">
                             <img src="/asset/img/organization.png" alt="organization">
                             <h3>Для организации</h3>
-                          </div>
                         </div>
-                      </div>
-                  </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="reviews">
@@ -221,8 +238,8 @@
                         Отзывы
                     </h2>
                     <div class="reviews__slider swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide reviews__item">
+                        <div class="swiper-wrapper" id="tns1">
+                            <div class="swiper-slide reviews__item col-xl-4 col-lg-6 col-md-12">
                                 <h4 class="slide__title">
                                     Министерство образования Омской области
                                 </h4>
@@ -232,7 +249,7 @@
                                     стратегические управленческие решения, нести личную ответственность...
                                 </p>
                             </div>
-                            <div class="swiper-slide reviews__item">
+                            <div class="swiper-slide reviews__item col-xl-4 col-lg-6 col-md-12">
                                 <h4 class="slide__title">
                                     REAKTOR
                                 </h4>
@@ -242,7 +259,7 @@
                                     интеллектуального и профессионального уровня сотрудников...
                                 </p>
                             </div>
-                            <div class="swiper-slide reviews__item">
+                            <div class="swiper-slide reviews__item col-xl-4 col-lg-6 col-md-12">
                                 <h4 class="slide__title">
                                     ПО “ИРТЫШ”
                                 </h4>
@@ -253,7 +270,7 @@
                                     помогают им в работе...
                                 </p>
                             </div>
-                            <div class="swiper-slide reviews__item">
+                            <div class="swiper-slide reviews__item col-xl-4 col-lg-6 col-md-12">
                                 <h4 class="slide__title">
                                     Министерство образования Омской области
                                 </h4>
@@ -263,7 +280,7 @@
                                     стратегические управленческие решения, нести личную ответственность...
                                 </p>
                             </div>
-                            <div class="swiper-slide reviews__item">
+                            <div class="swiper-slide reviews__item col-xl-4 col-lg-6 col-md-12">
                                 <h4 class="slide__title">
                                     REAKTOR
                                 </h4>
@@ -273,7 +290,7 @@
                                     интеллектуального и профессионального уровня сотрудников...
                                 </p>
                             </div>
-                            <div class="swiper-slide reviews__item">
+                            <div class="swiper-slide reviews__item col-xl-4 col-lg-6 col-md-12">
                                 <h4 class="slide__title">
                                     ПО “ИРТЫШ”
                                 </h4>
@@ -293,22 +310,22 @@
         </section>
         <section class="contacts">
             <div class="container">
-                <div class="contacts__inner">
-                    <div class="contacts__info">
-                        <h2 class="contacts__title">
-                            Контакты
-                        </h2>
-                        <div class="contacts__item col-lg-4">
+                <h2 class="contacts__title">
+                    Контакты
+                </h2>
+                <div class="contacts__inner row">
+                    <div class="contacts__info col-lg-6">
+                        <div class="contacts__item d-flex flex-column">
                             <a href="#" class="contacts__tel">+(351) 282 405 697</a>
                             <a href="#" class="contacts__mail">info@autodromodoalgarve.com</a>
-                            <div class="contacts__icons">
+                            <div class="contacts__icons d-flex justify-content-between col-lg-3 col-md-3 mb-3">
                                 <img src="/asset/img/whatsapp.svg" alt="whatsapp">
                                 <img src="/asset/img/mail.svg" alt="mail">
                                 <img src="/asset/img/telegram.svg" alt="telegram">
                             </div>
                         </div>
                     </div>
-                    <div class="contacts__map col-lg-5 offset-md-3 ">
+                    <div class="contacts__map col-lg-6">
                         <img src="/asset/img/map.png" alt="map">
                     </div>
                 </div>
@@ -317,10 +334,10 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <div class="footer__inner">
-                <img src="/asset/img/logo.svg" alt="logo" class="logo__footer">
-                <nav class="footer__menu">
-                    <ul class="footer__menu-list">
+            <div class="footer__inner row align-items-center">
+                <img src="/asset/img/logo.svg" alt="logo" class="logo__footer col-xl-1 col-2">
+                <nav class="footer__menu offset-xl-1 col-xl-10 col-lg-12">
+                    <ul class="footer__menu-list d-flex justify-content-between">
                         <li class="footer__menu-item">
                             <a href="#" class="footer__menu-link">
                                 Категории
@@ -356,16 +373,21 @@
                                 Поддержка
                             </a>
                         </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">
+                                Политика конфиденциальности
+                            </a>
+                        </li>
 
                     </ul>
                 </nav>
-                <a href="#" class="politics">Политика конфиденциальности</a>
             </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="/asset/js/main.js"></script>
 </body>
