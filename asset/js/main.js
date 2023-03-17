@@ -21,7 +21,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 var swiper_2 = new Swiper(".mySwiper", {
-  slidesPerView: 3,
+  slidesPerView: "auto",
   spaceBetween: 30,
   breakpoints: {
     // when window width is >= 640px
@@ -37,17 +37,28 @@ var swiper_2 = new Swiper(".mySwiper", {
 
     768: {
       slidesPerView: 1,
-      spaceBetween: 30
+      spaceBetween: 30,
+      freeMode: {
+        enabled: true,
+        sticky: false,
+      },
+      autoplay: {
+        delay: 200000000,
+      }
     },
 
     576: {
       slidesPerView: 1,
-      spaceBetween: 30
+      spaceBetween: 30,
+      freeMode: {
+        enabled: false,
+        sticky: true,
+      },
     },
 
     300: {
       slidesPerView: 1,
-      spaceBetween: 30
+      spaceBetween: 30,
     },
 
 
