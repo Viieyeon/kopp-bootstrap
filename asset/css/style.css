@@ -293,6 +293,10 @@ header{
     gap: 20px;
 }
 
+.map{
+    border-radius: 30px;
+}
+
 .footer{
     padding: 50px 0 50px 0;
 }
@@ -393,6 +397,14 @@ header{
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .kopp__inner{
+        padding-bottom: 0;
+    }
+
+    .category{
+        padding-bottom: 30px;
     }
 }
 
