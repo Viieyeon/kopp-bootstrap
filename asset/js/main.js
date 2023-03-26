@@ -38,22 +38,11 @@ var swiper_2 = new Swiper(".mySwiper", {
     768: {
       slidesPerView: 1,
       spaceBetween: 30,
-      freeMode: {
-        enabled: true,
-        sticky: false,
-      },
-      autoplay: {
-        delay: 200000000,
-      }
     },
 
     576: {
       slidesPerView: 1,
       spaceBetween: 30,
-      freeMode: {
-        enabled: false,
-        sticky: true,
-      },
     },
 
     300: {

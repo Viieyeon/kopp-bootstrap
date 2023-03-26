@@ -313,6 +313,7 @@ header{
     list-style: none;
     padding: 0;
     z-index: 1;
+    display: block;
 }
 
 
@@ -390,7 +391,8 @@ header{
     }
 
     .reviews__item{
-        max-width: 520px;
+        max-width: initial;
+        /* Проблема была в том, что у тебя тут фиксированная ширина стояла 540px а свайпер ставит своим слайдам ее сам, и перебивающие стили это ломают */
     }
 
     .footer__menu-list{
